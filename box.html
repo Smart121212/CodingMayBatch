@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>css box model</title>
+    <style>
+      .container {
+        height: 300px;
+        width: 300px;
+        background-color: brown;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+      }
+      ul {
+        list-style-type: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .ho {
+        width: 200px;
+        color: red;
+      }
+      .ho:hover {
+        color: #ffff;
+        background-color: #232423;
+        text-decoration: underline;
+      }
+      .ab:hover {
+      color: yellow;
+      background-color: red;
+      text-decoration: underline; 
+      }
+      .se:hover {
+        color: rgb(165, 58, 160);
+      background-color: #060606;
+      text-decoration: underline
+      }
+      .co {
+        color: red;
+        width: 500px;
+        height: 100px;
+        font-weight: bold;
+      }
+      .co:hover {
+        color: rgb(51, 25, 163);
+      background-color: #232423;
+      text-decoration: underline
+      }
+      a:hover {background-color: aqua;}
+      .bt {
+        position: absolute;
+        top: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    </div>
+    <div>
+      <ul>
+        <li><a href="" >house </a></li>
+        <li><a href="" >about</a></li>
+        <li><a href="" class="se">services</a></li>
+        <li><a href="" class="co">contact</a></li>
+      </ul> 
+    </div>
+    <button class="bt">smart</button>
+  </body>
+</html>
