@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="cocacoa.css">
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <section class="sec">
+      <header>
+        <ul>
+          <li> <a href="">HOME</a></li>
+          <li> <a href="">PRODUCT</a></li>
+          <li> <a href="">ABOUT</a></li>
+          <li> <a href="">SUPPORT</a></li>
+        </ul>
+        <img class="search" src="search.svg" alt="">
+        <img class="cart" src="cart2.svg" alt="">
+      </header>
+      <div class="content"> 
+        <div class="textbox">
+          <h2>Always <br>Be Your <br>Self</h2>
+          <p class="drinks">COCACOLA</p>
+          <p style="font-size: 27px;">Total Order :$<strong class="num">0</strong><strong>.00</strong> </p>
+          <div><strong>Choose Your</strong></div>
+          <button id="decrease"><</button>
+          <span class="span">0</span>
+          <button id="increase">></button>
+        </div>
+        <button class="btn">buy now</button>
+        <div class="imgbox">
+          <img src="Coca.png" alt="image" width="200px" class="coca1"> 
+        </div>
+      </div>
+      <ul class="thumb">
+        <li><img src="Coca.png" onclick="imgslider('Coca.png');changecolor('red'); text('COCACOLA')"></li>
+        <li><img src="sprite.png" onclick="imgslider('sprite.png');changecolor('green'); text('SPRITE')"></li>
+        <li><img src="fanta.png" onclick="imgslider('fanta.png');changecolor('orange'); text('FANTA')"></li>
+      </ul>
+    </section>
+    <script type="text/javascript">
+      function imgslider(anything){
+        document.querySelector('.coca1').src = anything;
+      }
+      function changecolor(color){
+        const sec = document.querySelector('.sec');
+        sec.style.background = color;
+      }
+      function text(text){
+        const drk = document.querySelector('.drinks');
+        drk.innerHTML = text;
+      }
+
+     let decrease = document.querySelector('#decrease')
+     let increase = document.querySelector('#increase')
+     let span = document.querySelector('.span')
+     let num = document.querySelector('.num')
+
+    let count = 0;
+     increase.addEventListener('click', function dec(){
+  count++;
+  console.log(count);
+  span.innerHTML = count;
+  num.innerHTML = count;
+  if (count == 15){
+    increase.disabled = true;
+  }
+  else if (count < 15){
+    increase.disabled = false;
+  }
+  if (count == -0){
+    decrease.disabled = true;
+  }
+  else if (count > -0){
+    decrease.disabled = false;
+  }
+})
+
+decrease.addEventListener('click', function dec(){
+  count--;
+  console.log(count);
+  span.innerHTML = count;
+  num.innerHTML = count;
+  if (count == -0){
+    decrease.disabled = true;
+  }
+  else if (count > -0){
+    decrease.disabled = false;
+  }
+  if (count == 10){
+    increase.disabled = true;
+  }
+  else if (count < 10){
+    increase.disabled = false;
+  }
+})
+    </script>
+  </body>
+</html> 
